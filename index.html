@@ -3,93 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASEMedia Tech - Mobile App Development Company</title>
+    <title>ASEMedia Tech - Innovative Mobile App Development</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, #3B82F6, #2563EB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
+    <nav class="bg-white shadow-lg fixed w-full z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="/" class="text-2xl font-bold text-blue-600">ASEMedia Tech</a>
+                    <a href="/" class="text-3xl font-bold gradient-text">ASEMedia Tech</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
-                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600">Portfolio</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
-                    <a href="privacy-policy.html" class="text-gray-700 hover:text-blue-600">Privacy Policy</a>
-                    <a href="disclaimer.html" class="text-gray-700 hover:text-blue-600">Disclaimer</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Services</a>
+                    <a href="#why-us" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Why Us</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Portfolio</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                    <a href="privacy-policy.html" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Privacy</a>
+                    <a href="disclaimer.html" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Disclaimer</a>
                 </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden mobile-menu bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Services</a>
+                <a href="#why-us" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Why Us</a>
+                <a href="#portfolio" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Portfolio</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Contact</a>
+                <a href="privacy-policy.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Privacy</a>
+                <a href="disclaimer.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Disclaimer</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-gradient-to-r from-blue-500 to-blue-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Transform Your Ideas Into Reality</h1>
-            <p class="text-xl text-blue-100 mb-8">We build exceptional mobile applications for Android and iOS platforms</p>
-            <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition duration-300">Get Started</a>
+    <section class="min-h-screen flex items-center pt-20 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Transforming Ideas into Exceptional Mobile Experiences</h1>
+                    <p class="text-xl text-blue-100 mb-8">We craft innovative, user-centric mobile applications that drive business growth and user engagement. Your vision, our expertise.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition duration-300 hover-scale">Start Your Project</a>
+                        <a href="#portfolio" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300 hover-scale">View Our Work</a>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" class="hidden md:block">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
+                        <img src="https://raw.githubusercontent.com/your-username/your-repo/main/hero-image.svg" alt="Mobile App Development" class="relative z-10 w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose ASEMedia Tech?</h2>
+                <p class="text-xl text-gray-600">We deliver excellence through innovation, expertise, and dedication</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-600 mb-4"><i class="fas fa-rocket text-4xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-3">Innovation First</h3>
+                    <p class="text-gray-600">We stay ahead of the curve with cutting-edge technologies and development practices.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-blue-600 mb-4"><i class="fas fa-users text-4xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-3">Expert Team</h3>
+                    <p class="text-gray-600">Our seasoned developers bring years of experience in mobile app development.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-blue-600 mb-4"><i class="fas fa-clock text-4xl"></i></div>
+                    <h3 class="text-xl font-semibold mb-3">Timely Delivery</h3>
+                    <p class="text-gray-600">We respect deadlines and ensure your project launches on schedule.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20">
+    <section id="services" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600">Comprehensive mobile solutions for your business needs</p>
+            </div>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <i class="fab fa-android text-4xl text-green-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-3">Android Development</h3>
-                    <p class="text-gray-600">Custom Android applications built with the latest technologies and best practices.</p>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale" data-aos="fade-right">
+                    <div class="flex items-center mb-6">
+                        <i class="fab fa-android text-5xl text-green-500 mr-4"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2">Android Development</h3>
+                            <p class="text-gray-600">Native Android applications built for performance and user experience</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Material Design implementation</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Kotlin & Java expertise</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Google Play Store optimization</li>
+                    </ul>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <i class="fab fa-apple text-4xl text-gray-800 mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-3">iOS Development</h3>
-                    <p class="text-gray-600">Native iOS applications designed to provide the best user experience.</p>
+                <div class="bg-white p-8 rounded-xl shadow-lg hover-scale" data-aos="fade-left">
+                    <div class="flex items-center mb-6">
+                        <i class="fab fa-apple text-5xl text-gray-800 mr-4"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2">iOS Development</h3>
+                            <p class="text-gray-600">Elegant iOS applications designed for the Apple ecosystem</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Swift & SwiftUI development</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Apple Human Interface Guidelines</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>App Store optimization</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 bg-gray-100">
+    <section id="portfolio" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Portfolio</h2>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Portfolio</h2>
+                <p class="text-xl text-gray-600">Showcasing our best mobile app development work</p>
+            </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Portfolio items will be added here -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <div class="h-48 bg-gray-200"></div>
+                <div class="bg-gray-50 rounded-xl overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden group">
+                        <img src="https://raw.githubusercontent.com/your-username/your-repo/main/portfolio-1.svg" alt="Project 1" class="w-full h-full object-cover transition duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="text-white font-semibold hover:underline">View Project</a>
+                        </div>
+                    </div>
                     <div class="p-6">
-                        <h3 class="font-semibold mb-2">Project Name</h3>
-                        <p class="text-gray-600">Brief project description goes here.</p>
+                        <h3 class="text-xl font-semibold mb-2">Health & Fitness App</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive fitness tracking application with personalized workout plans.</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Android</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">iOS</span>
+                        </div>
                     </div>
                 </div>
+                <!-- Add more portfolio items here -->
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
+    <section id="contact" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600">Let's discuss your project and make it happen</p>
+            </div>
             <div class="max-w-3xl mx-auto">
-                <form class="space-y-6">
-                    <div>
-                        <label class="block text-gray-700 mb-2">Name</label>
-                        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                <form class="space-y-6" data-aos="fade-up">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition duration-300" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition duration-300" placeholder="your@email.com">
+                        </div>
                     </div>
                     <div>
-                        <label class="block text-gray-700 mb-2">Email</label>
-                        <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                        <label class="block text-gray-700 mb-2 font-medium">Project Type</label>
+                        <select class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition duration-300">
+                            <option>Android App Development</option>
+                            <option>iOS App Development</option>
+                            <option>Both Platforms</option>
+                            <option>Other</option>
+                        </select>
                     </div>
                     <div>
-                        <label class="block text-gray-700 mb-2">Message</label>
-                        <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500" rows="4"></textarea>
+                        <label class="block text-gray-700 mb-2 font-medium">Message</label>
+                        <textarea class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition duration-300" rows="4" placeholder="Tell us about your project"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">Send Message</button>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 transition duration-300 hover-scale font-medium">Send Message</button>
                 </form>
             </div>
         </div>
@@ -98,31 +219,74 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-semibold mb-4">ASEMedia Tech</h3>
-                    <p class="text-gray-400">Building exceptional mobile experiences.</p>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">ASEMedia Tech</h3>
+                    <p class="text-gray-400">Crafting exceptional mobile experiences that drive business growth.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <h3 class="text-xl font-semibold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                        <li><a href="disclaimer.html" class="text-gray-400 hover:text-white">Disclaimer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Android Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">iOS Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">UI/UX Design</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-semibold mb-4">Connect With Us</h3>
+                    <h3 class="text-xl font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="disclaimer.html" class="text-gray-400 hover:text-white transition duration-300">Disclaimer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Connect</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center">
                 <p class="text-gray-400">&copy; 2024 ASEMedia Tech. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init();
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.getElementById('navbar').classList.add('bg-white/95', 'backdrop-blur-sm');
+                document.getElementById('navbar').classList.remove('bg-white');
+            } else {
+                document.getElementById('navbar').classList.remove('bg-white/95', 'backdrop-blur-sm');
+                document.getElementById('navbar').classList.add('bg-white');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                document.querySelector('.mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>

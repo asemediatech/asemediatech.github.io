@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="bg-gray-50">
-    <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
@@ -17,83 +16,97 @@
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="/" class="text-gray-700 hover:text-blue-600">Home</a>
-                    <a href="privacy-policy.html" class="text-blue-600">Privacy Policy</a>
+                    <a href="privacy-policy.html" class="text-blue-600 font-semibold">Privacy Policy</a>
                     <a href="disclaimer.html" class="text-gray-700 hover:text-blue-600">Disclaimer</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Privacy Policy Content -->
     <div class="pt-24 pb-12">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
             
             <div class="prose max-w-none space-y-6 text-gray-600">
-                <p class="mb-4">Last updated: January 2024</p>
+                <p class="mb-4">Last updated: July 29, 2025</p>
 
                 <section class="mb-8">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">Introduction</h2>
-                    <p>ASEMedia Tech ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you use our mobile applications.</p>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
+                    <p>ASEMedia Tech ("we," "our," or "us") builds applications to make your digital life easier. This privacy policy explains how we collect, use, and safeguard your information when you use our mobile applications, with specific details for our app, <b>GoTagihan</b>.</p>
                 </section>
 
                 <section class="mb-8">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">Information We Collect</h2>
-                    <p>We may collect several types of information, including:</p>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">2. Information We Collect</h2>
+                    <p>Our goal is to collect the minimum amount of data necessary to provide a functional and reliable service. The data we collect depends on the application you use.</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Specifically for GoTagihan:</h3>
+                    <p>For the GoTagihan app, we do <b>NOT</b> collect personal identification information like your name, email address, or phone number, as the app does not require registration or login.</p>
+                    <p>The information we process includes:</p>
                     <ul class="list-disc pl-6 mt-2 space-y-2">
-                        <li>Personal identification information (Name, email address, phone number)</li>
-                        <li>Device information (Device type, operating system)</li>
-                        <li>Usage data (App features used, time spent in app)</li>
-                        <li>Location data (with your permission)</li>
+                        <li><b>User-Provided Customer IDs:</b> We process customer identification numbers (e.g., ID Pelanggan PLN, nomor BPJS Kesehatan) that you voluntarily enter into the app to check your bills. This information is sent directly to the public APIs of the respective service providers to fetch billing information.</li>
+                        <li><b>Locally Stored Data (History):</b> For your convenience, the Customer IDs and the results of your bill checks (riwayat tagihan) are stored <b>only on your device's local storage</b>. This data is not uploaded to our servers and remains under your control.</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">General Device & Usage Data (All Apps):</h3>
+                    <p>To improve app performance and stability, we may collect anonymous data, including:</p>
+                    <ul class="list-disc pl-6 mt-2 space-y-2">
+                        <li><b>Device Information:</b> Anonymous information such as device type, operating system version, and screen size to ensure compatibility.</li>
+                        <li><b>Usage and Crash Data:</b> Anonymous analytics about which features are used most and automatic crash reports to help us identify and fix bugs. This is typically handled by third-party services like Google Firebase.</li>
                     </ul>
                 </section>
 
                 <section class="mb-8">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">How We Use Your Information</h2>
-                    <p>We use the collected information for various purposes:</p>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">3. How We Use Your Information</h2>
+                    <p>We use the collected information for the following purposes:</p>
                     <ul class="list-disc pl-6 mt-2 space-y-2">
-                        <li>To provide and maintain our service</li>
-                        <li>To notify you about changes to our service</li>
-                        <li>To provide customer support</li>
-                        <li>To gather analysis or valuable information to improve our service</li>
-                        <li>To monitor the usage of our service</li>
-                        <li>To detect, prevent and address technical issues</li>
+                        <li><b>To Provide Core App Functionality:</b> For GoTagihan, this means using the Customer ID you provide to fetch and display your billing information.</li>
+                        <li><b>To Enhance User Experience:</b> Storing your check history locally allows you to review past bills without re-entering data.</li>
+                        <li><b>To Maintain and Improve Our Services:</b> Analyzing anonymous usage data helps us understand user needs, fix bugs, and improve app stability.</li>
+                        <li><b>To Provide Customer Support:</b> If you contact us for support, we may use your provided information to assist you.</li>
                     </ul>
                 </section>
 
                 <section class="mb-8">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">Data Security</h2>
-                    <p>The security of your data is important to us. We implement appropriate security measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal information.</p>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">4. Data Security</h2>
+                    <p>The security of your data is a top priority. For GoTagihan, we have implemented specific measures to protect your information:</p>
+                     <ul class="list-disc pl-6 mt-2 space-y-2">
+                        <li><b>Local Storage:</b> All sensitive data, including your Customer IDs and billing history, are stored exclusively on your device. We do not have access to this information.</li>
+                        <li><b>Secure Transmission:</b> When fetching data, we use secure protocols (HTTPS) to communicate with service provider APIs where available.</li>
+                    </ul>
+                    <p class="mt-2">However, no method of transmission over the internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your data, we cannot guarantee its absolute security.</p>
                 </section>
 
                 <section class="mb-8">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">Third-Party Services</h2>
-                    <p>Our applications may contain links to other sites that are not operated by us. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">5. Third-Party Services</h2>
+                    <p>Our applications may use third-party services for advertising and analytics. These services may collect anonymous data as described in their own privacy policies.</p>
+                     <ul class="list-disc pl-6 mt-2 space-y-2">
+                        <li><b>Google AdMob:</b> Used to display advertisements in the app.</li>
+                        <li><b>Google Firebase:</b> Used for anonymous analytics and crash reporting.</li>
+                     </ul>
+                    <p class="mt-2">Furthermore, GoTagihan retrieves data from public APIs provided by or on behalf of service providers like PLN and BPJS Kesehatan. We are not responsible for the privacy practices of these third parties.</p>
                 </section>
 
                 <section class="mb-8">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">Children's Privacy</h2>
-                    <p>Our services are not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under age 13, we will take steps to remove that information.</p>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">6. Children's Privacy</h2>
+                    <p>Our services are not intended for use by children under the age of 13. We do not knowingly collect personal identifiable information from children under 13.</p>
                 </section>
 
                 <section class="mb-8">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">Changes to This Privacy Policy</h2>
-                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top of this Privacy Policy.</p>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">7. Changes to This Privacy Policy</h2>
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top.</p>
                 </section>
 
                 <section class="mb-8">
-                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">Contact Us</h2>
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">8. Contact Us</h2>
                     <p>If you have any questions about this Privacy Policy, please contact us:</p>
                     <ul class="list-disc pl-6 mt-2 space-y-2">
-                        <li>By email: asemediatech@gmail.com</li>
-                        <!-- <li>By visiting our website: [Your Website URL]</li> -->
+                        <li><b>By email:</b> asemediatech@gmail.com</li>
                     </ul>
                 </section>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-8">
